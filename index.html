@@ -20,7 +20,11 @@
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
 
-    <!-- Own Stylesheet -->
+    <!-- Pure CSS Scrollable Horizontal Menu -->
+    <!-- Reference: https://www.geeksforgeeks.org/pure-css-scrollable-horizontal-menu/ -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css">
+    
+    <!-- Own Stylesheets -->
     <link href="./css/main.css" rel="stylesheet">
     <title>AccessNow</title>
 </head>
@@ -40,7 +44,7 @@
         <div id="map"></div>
 
         <!-- Categories buttons -->
-        <div id="categories" class="text-nowrap">
+        <div id="categories" class="pure-menu pure-menu-horizontal pure-menu-scrollable">
             <button type="button" class="btn btn-light rounded-pill mx-1 px-3">
                 <img class="px-2" src="./images/home/restaurant.png" alt="A restaurant icon">Restaurants
             </button>
@@ -213,4 +217,5 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 </body>
+
 </html>
