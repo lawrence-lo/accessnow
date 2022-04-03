@@ -9,20 +9,35 @@ map.addLayer(new L.TileLayer('http://a.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png
 
 // Add markers
 var orangeMarker = L.icon({
-    iconUrl: '../images/home/marker-orange.png',
+    iconUrl: './images/home/marker-orange.png',
     iconSize: [43, 43], // size of the icon
+    iconAnchor: [21, 43],
+    popupAnchor: null,
+    shadowUrl: null,
+    shadowSize: null,
+    shadowAnchor: null
 });
 L.marker([43.66752142844879, -79.39981081185977], {icon: orangeMarker}).addTo(map);
 
 var blueMarker = L.icon({
-    iconUrl: '../images/home/marker-blue.png',
+    iconUrl: './images/home/marker-blue.png',
     iconSize: [43, 43], // size of the icon
+    iconAnchor: [21, 43],
+    popupAnchor: null,
+    shadowUrl: null,
+    shadowSize: null,
+    shadowAnchor: null
 });
 L.marker([43.660982850893895, -79.40498666246725], {icon: blueMarker}).addTo(map);
 
 var redMarker = L.icon({
-    iconUrl: '../images/home/marker-red.png',
+    iconUrl: './images/home/marker-red.png',
     iconSize: [43, 43], // size of the icon
+    iconAnchor: [21, 43],
+    popupAnchor: null,
+    shadowUrl: null,
+    shadowSize: null,
+    shadowAnchor: null
 });
 L.marker([43.67057330763631, -79.40615798644176], {icon: redMarker}).addTo(map);
 
