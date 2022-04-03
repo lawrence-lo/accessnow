@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+
+    <!-- Leaftlet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+    <!-- Own Stylesheet -->
+    <link href="./css/main.css" rel="stylesheet">
+    <title>AccessNow</title>
+</head>
+
+<body>
+    <div id="mapDiv">
+        <!-- Search bar -->
+        <div id="search-bar" class="d-flex flex-row">
+            <img id="search-icon" class="p-2" src="./images/home/search.png" alt="A search icon">
+            <input type="text" class="form-control rounded-0 border-0" placeholder="Search for place"
+                aria-label="Search bar">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#userModal"><img id="user-icon" class="p-2"
+                    src="./images/home/user.png" alt="A user icon"></a>
+        </div>
+
+        <!-- Map -->
+        <div id="map"></div>
+
+        <!-- Categories buttons -->
+        <div id="categories" class="text-nowrap">
+            <button type="button" class="btn btn-light rounded-pill mx-1 px-3 shadow">
+                <img class="px-2" src="./images/home/restaurant.png" alt="A restaurant icon">Restaurants
+            </button>
+            <button type="button" class="btn btn-light rounded-pill mx-1 px-3 shadow">
+                <img class="px-2" src="./images/home/coffee.png" alt="A coffee icon">Coffee
+            </button>
+            <button type="button" class="btn btn-light rounded-pill mx-1 px-3 shadow">
+                <img class="px-2" src="./images/home/shopping-cart.png" alt="A shooping cart icon">Shopping
+            </button>
+            <button type="button" class="btn btn-light rounded-pill mx-1 px-3 shadow" data-bs-toggle="modal"
+                data-bs-target="#moreCategoriesModal">
+                <img class="px-2" src="./images/home/more.png" alt="An icon with dots">More
+            </button>
+        </div>
+
+        <!-- Buttons -->
+        <div id="button-group" class="d-flex flex-column">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#filterModal"><img id="filter-icon" class="p-2"
+                    src="./images/home/filter.png" alt="A filter icon"></a>
+            <img id="locate-icon" class="p-2" src="./images/home/locate.png" alt="A locate icon">
+        </div>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <div class="row p-3">
+                <img id="nav-bar" class="mx-auto" src="./images/home/nav-bar.png" alt="An icon with dots">
+            </div>
+            <div id="menu" class="row text-center">
+                <ul>
+                    <li>
+                        <a class="d-inline-block p-4" href="#" data-bs-toggle="modal" data-bs-target="#mapModal"><img
+                                src="./images/home/map.png" alt="A map icon"><span class="d-block">Map</span></a>
+                    </li>
+                    <li>
+                        <a class="d-inline-block p-4" href="#" data-bs-toggle="modal"
+                            data-bs-target="#recommendedModal"><img src="./images/home/recommended.png"
+                                alt="A recommended icon"><span class="d-block"></span>Recommended</span></a>
+                    </li>
+                    <li>
+                        <a class="d-inline-block p-4" href="#" data-bs-toggle="modal" data-bs-target="#savedModal"><img
+                                src="./images/home/saved.png" alt="A recommended icon"><span
+                                class="d-block"></span>Saved</span></a>
+                    </li>
+                    <li>
+                        <a class="d-inline-block p-4" href="#" data-bs-toggle="modal" data-bs-target="#moreModal"><img
+                                src="./images/home/more.png" alt="A recommended icon"><span
+                                class="d-block"></span>More</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- User Modal -->
+    <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <a href="#"><img class="" data-bs-dismiss="modal" aria-label="Close"
+                            src="./images/home/arrow-left.png" alt="An arrow icon to close the modal"></a>
+                    <h5 class="modal-title text-secondary fw-normal" id="userModalLabel">User</h5>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- More Categories Modal -->
+    <div class="modal fade" id="moreCategoriesModal" tabindex="-1" aria-labelledby="moreCategoriesModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <a href="#"><img class="" data-bs-dismiss="modal" aria-label="Close"
+                            src="./images/home/arrow-left.png" alt="An arrow icon to close the modal"></a>
+                    <h5 class="modal-title text-secondary fw-normal" id="moreCategoriesModalLabel">More Categories</h5>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals for nav -->
+    <!-- Filter Modal -->
+    <div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <a href="#"><img class="" data-bs-dismiss="modal" aria-label="Close"
+                            src="./images/home/arrow-left.png" alt="An arrow icon to close the modal"></a>
+                    <h5 class="modal-title text-secondary fw-normal" id="filterModalLabel">Filters</h5>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map Modal -->
+    <div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <a href="#"><img class="" data-bs-dismiss="modal" aria-label="Close"
+                            src="./images/home/arrow-left.png" alt="An arrow icon to close the modal"></a>
+                    <h5 class="modal-title text-secondary fw-normal" id="mapModalLabel">Map</h5>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recommended Modal -->
+    <div class="modal fade" id="recommendedModal" tabindex="-1" aria-labelledby="recommendedModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <a href="#"><img class="" data-bs-dismiss="modal" aria-label="Close"
+                            src="./images/home/arrow-left.png" alt="An arrow icon to close the modal"></a>
+                    <h5 class="modal-title text-secondary fw-normal" id="recommendedModalLabel">Recommended</h5>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Saved Modal -->
+    <div class="modal fade" id="savedModal" tabindex="-1" aria-labelledby="savedModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <a href="#"><img class="" data-bs-dismiss="modal" aria-label="Close"
+                            src="./images/home/arrow-left.png" alt="An arrow icon to close the modal"></a>
+                    <h5 class="modal-title text-secondary fw-normal" id="savedModalLabel">Saved</h5>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- More Modal -->
+    <div class="modal fade" id="moreModal" tabindex="-1" aria-labelledby="moreModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <a href="#"><img class="" data-bs-dismiss="modal" aria-label="Close"
+                            src="./images/home/arrow-left.png" alt="An arrow icon to close the modal"></a>
+                    <h5 class="modal-title text-secondary fw-normal" id="moreModalLabel">More</h5>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/map.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
