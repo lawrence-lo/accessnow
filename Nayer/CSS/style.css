@@ -46,3 +46,14 @@
 .AppSuggested .AppSuggested__elem div{
   padding: 0;
 }
+
+.more h3{
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+.more .more_elem{
+  border-bottom: 3px solid #cccccc;
+
+}
