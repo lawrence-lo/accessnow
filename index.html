@@ -43,20 +43,25 @@
 
 <body>
     <div id="mapDiv">
-        <!-- Search bar -->
-        <div id="search-bar" class="d-flex flex-row">
-            <img id="search-icon" class="p-2" src="./images/home/search.png" alt="A search icon">
-            <input type="text" class="form-control rounded-0 border-0" placeholder="Search for place"
-                aria-label="Search bar">
-            <a href="#" data-bs-toggle="modal" data-bs-target="#userModal"><img id="user-icon" class="p-2"
-                    src="./images/home/user.png" alt="A user icon"></a>
-        </div>
-
         <!-- Map -->
         <div id="map"></div>
 
+        <!-- Search bar -->
+        <div id="search-bar" class="d-flex flex-row justify-content-center align-items-center">
+            <div id="search-items" class="d-flex flex-row p-2 my-3 ms-3">
+                <img id="search-icon" src="./images/home/search.png" alt="A search icon">
+                <input type="text" class="form-control rounded-0 border-0" placeholder="Search"
+                    aria-label="Search bar">
+                <img id="mic-icon" src="./images/home/mic.png" alt="A microphone icon">
+            </div>
+            <img id="option-icon" class="m-3" src="./images/home/option.png" alt="An option icon">
+            <!-- <a href="#" data-bs-toggle="modal" data-bs-target="#userModal"><img id="user-icon" class="p-2"
+                    src="./images/home/user.png" alt="A user icon"></a> -->
+        </div>
+
         <!-- Categories buttons -->
         <div id="categories" class="pure-menu pure-menu-horizontal pure-menu-scrollable">
+            <button id="allButton" type="button" class="btn btn-light rounded-pill mx-1 px-5 text-light">All</button>
             <button type="button" class="btn btn-light rounded-pill mx-1 px-3">
                 <img class="px-2" src="./images/home/restaurant.png" alt="A restaurant icon">Restaurants
             </button>
@@ -74,15 +79,15 @@
 
         <!-- Buttons -->
         <div id="button-group" class="d-flex flex-column">
-            <a href="#" data-bs-toggle="modal" data-bs-target="#filterModal"><img id="filter-icon" class="p-2"
-                    src="./images/home/filter.png" alt="A filter icon"></a>
-            <img id="locate-icon" class="p-2" src="./images/home/locate.png" alt="A locate icon">
+            <!-- <a href="#" data-bs-toggle="modal" data-bs-target="#filterModal"><img id="filter-icon" class="p-2"
+                    src="./images/home/filter.png" alt="A filter icon"></a> -->
+            <img id="locate-icon" class="p-2" src="./images/home/locate-new.png" alt="A locate icon">
         </div>
 
         <!-- Nav -->
         <nav id="nav" class="text-center">
             <div id="nav-top">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#suggestedModal"><img id="nav-bar" class="m-3"
+                <a href="#" data-bs-toggle="modal" data-bs-target="#suggestedModal"><img id="nav-bar"
                         src="./images/home/nav-bar.png" alt="An icon with dots"></a>
             </div>
             <ul>
@@ -90,23 +95,23 @@
                     <!--<a class="d-inline-block p-3" href="#" data-bs-toggle="modal" data-bs-target="#mapModal"><img
                             src="./images/home/map.png" alt="A map icon">-->
 
-                    <a class="d-inline-block p-3" href="#"><img src="./images/home/map.png" alt="A map icon"><span
+                    <a class="d-inline-block p-1 my-1" href="#"><img src="./images/home/map.png" alt="A map icon"><span
                             class="d-block">Map</span></a>
                 </li>
                 <li>
-                    <a class="d-inline-block p-3" href="#" data-bs-toggle="modal"
+                    <a class="d-inline-block p-1 my-1" href="#" data-bs-toggle="modal"
                         data-bs-target="#recommendedModal"><img src="./images/home/recommended.png"
                             alt="A recommended icon"><span class="d-block"></span>Recommended</span></a>
                 </li>
                 <li>
-                    <a class="d-inline-block p-3" href="#" data-bs-toggle="modal" data-bs-target="#savedModal"><img
-                            src="./images/home/saved.png" alt="A recommended icon"><span
-                            class="d-block"></span>Saved</span></a>
+                    <a class="d-inline-block p-1 my-1" href="#" data-bs-toggle="modal" data-bs-target="#savedModal"><img
+                            src="./images/home/contribute.png" alt="A contribute icon"><span
+                            class="d-block"></span>Contribute</span></a>
                 </li>
                 <li>
-                    <a class="d-inline-block p-3" href="#" data-bs-toggle="modal" data-bs-target="#moreModal"><img
-                            src="./images/home/more.png" alt="A recommended icon"><span
-                            class="d-block"></span>More</span></a>
+                    <a class="d-inline-block p-1 my-1" href="#" data-bs-toggle="modal" data-bs-target="#moreModal"><img
+                            src="./images/home/profile.png" alt="A profile icon"><span
+                            class="d-block"></span>Profile</span></a>
                 </li>
             </ul>
         </nav>
