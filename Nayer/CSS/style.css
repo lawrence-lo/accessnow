@@ -55,5 +55,35 @@
 }
 .more .more_elem{
   border-bottom: 3px solid #cccccc;
+}
 
+.modal-content .more .distance *{
+font-weight: bold;
+font-size: 16px;
+}
+
+.modal-content .more .distance button{
+color: #00D1FF;
+background-color: white;
+border: 1px solid #00D1FF;
+}
+.modal-content .more .distance h4{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+.modal-content .more .distance .distanceBtns .distanceBtn{
+ width: 168px;
+}
+
+/*Distance toggle*/
+#distanceBtnKM:focus{
+  background-color: #00D1FF ;
+  color: white ;
+  border: none;
+}
+#distanceBtnMILES:focus{
+  background-color: #00D1FF ;
+  color: white ;
+  border: none;
 }
