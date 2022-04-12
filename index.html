@@ -16,6 +16,9 @@
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
         crossorigin="" />
 
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/7134524d08.js" crossorigin="anonymous"></script>
+
     <!-- Leaftlet JavaScript -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
@@ -25,13 +28,16 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/b7e8f06a9a.js" crossorigin="anonymous"></script>
 
+
     <!-- Pure CSS Scrollable Horizontal Menu -->
     <!-- Reference: https://www.geeksforgeeks.org/pure-css-scrollable-horizontal-menu/ -->
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css">
-    
+
     <!-- Own Stylesheets -->
     <link href="./css/main.css" rel="stylesheet">
     <link href="./css/categories.css" rel="stylesheet">
+    <link href="./Nayer/CSS/style.css" rel="stylesheet">
+
     <title>AccessNow</title>
 </head>
 
@@ -76,12 +82,16 @@
         <!-- Nav -->
         <nav id="nav" class="text-center">
             <div id="nav-top">
-                <img id="nav-bar" class="m-3" src="./images/home/nav-bar.png" alt="An icon with dots">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#suggestedModal"><img id="nav-bar" class="m-3"
+                        src="./images/home/nav-bar.png" alt="An icon with dots"></a>
             </div>
             <ul>
                 <li>
-                    <a class="d-inline-block p-3" href="#" data-bs-toggle="modal" data-bs-target="#mapModal"><img
-                            src="./images/home/map.png" alt="A map icon"><span class="d-block">Map</span></a>
+                    <!--<a class="d-inline-block p-3" href="#" data-bs-toggle="modal" data-bs-target="#mapModal"><img
+                            src="./images/home/map.png" alt="A map icon">-->
+
+                    <a class="d-inline-block p-3" href="#"><img src="./images/home/map.png" alt="A map icon"><span
+                            class="d-block">Map</span></a>
                 </li>
                 <li>
                     <a class="d-inline-block p-3" href="#" data-bs-toggle="modal"
@@ -128,138 +138,178 @@
                             src="./images/home/arrow-left.png" alt="An arrow icon to close the modal"></a>
                     <h5 class="modal-title text-secondary fw-normal" id="moreCategoriesModalLabel">More Categories</h5>
                 </div>
-              
+
                 <div class="modal-body">
                     <!-- add here  -->
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                        
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon"></span>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNav">
-                          <ul class="navbar-nav">
-                            <li class="nav-item active">
-                              <a class="nav-link" href="#">Food and Drinks <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Things to do</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Shopping</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Services</a>
-                              </li>
-                          </ul>
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Food and Drinks <span
+                                            class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Things to do</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Shopping</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Services</a>
+                                </li>
+                            </ul>
                         </div>
-                      </nav>
-                    <div id ="category-main">
-                    
+                    </nav>
+                    <div id="category-main">
+
                         <section>
                             <h2>Food and Drink</h2>
-                            <div class="container" >
+                            <div class="container">
                                 <div class="row">
-                                    <span><button class="button"><i class="fas fa-utensils"></i>&nbsp;Restaurant</button></span>
-                                    <span><button class="button"><i class="fa-solid fa-ice-cream"></i>&nbsp;Desserts</button></span>           
+                                    <span><button class="button"><i
+                                                class="fas fa-utensils"></i>&nbsp;Restaurant</button></span>
+                                    <span><button class="button"><i
+                                                class="fa-solid fa-ice-cream"></i>&nbsp;Desserts</button></span>
                                 </div>
                                 <div class="row">
-                                    <span><button class="button"><i class="fa-solid fa-beer-mug-empty"></i>&nbsp;Bars</button></span>
-                                    <span><button class="button"><i class="fa-solid fa-bowl-rice"></i></i>&nbsp;Take Out</button></span>           
+                                    <span><button class="button"><i
+                                                class="fa-solid fa-beer-mug-empty"></i>&nbsp;Bars</button></span>
+                                    <span><button class="button"><i class="fa-solid fa-bowl-rice"></i></i>&nbsp;Take
+                                            Out</button></span>
                                 </div>
                                 <div class="row">
-                                    <span><button class="button"><i class="fa-solid fa-mug-saucer"></i>&nbsp;Coffee</button></span>
-                                    <span><button class="button"><i class="fa-solid fa-bicycle"></i>&nbsp;Delivery</button></span>        
+                                    <span><button class="button"><i
+                                                class="fa-solid fa-mug-saucer"></i>&nbsp;Coffee</button></span>
+                                    <span><button class="button"><i
+                                                class="fa-solid fa-bicycle"></i>&nbsp;Delivery</button></span>
                                 </div>
                                 <div class="row">
-                                    <span><button class="button"> <i class="fa-solid fa-burger"></i>&nbsp;Brunch</button></span> 
+                                    <span><button class="button"> <i
+                                                class="fa-solid fa-burger"></i>&nbsp;Brunch</button></span>
                                 </div>
                             </div>
-                        <span class="line"></span>
+                            <span class="line"></span>
                         </section>
-                
+
                         <section>
                             <h2>Things to do</h2>
-                            <div class="container" >
+                            <div class="container">
                                 <div class="row">
-                                    <span><button class="button"><i class="fa-solid fa-parachute-box"></i>&nbsp;Attractions</button></span>
-                                    <span><button class="button"><i class="fa-solid fa-music"></i></i>&nbsp;Live Music</button></span> 
+                                    <span><button class="button"><i
+                                                class="fa-solid fa-parachute-box"></i>&nbsp;Attractions</button></span>
+                                    <span><button class="button"><i class="fa-solid fa-music"></i></i>&nbsp;Live
+                                            Music</button></span>
                                 </div>
                                 <div class="row">
-                                    <span><button class="button"><i class="fa-solid fa-tree"></i>&nbsp;Parks</button></span>
-                                    <span><button class="button"><i class="fa-solid fa-bowl-rice"></i></i>&nbsp;Films</button></span>   
+                                    <span><button class="button"><i
+                                                class="fa-solid fa-tree"></i>&nbsp;Parks</button></span>
+                                    <span><button class="button"><i
+                                                class="fa-solid fa-bowl-rice"></i></i>&nbsp;Films</button></span>
                                 </div>
                                 <div class="row">
-                                    <span><button class="button"><i class="fa-solid fa-dumbbell"></i>&nbsp;Gyms</button></span>
-                                    <span><button class="button"><i class="fa-solid fa-building-columns"></i>&nbsp;Museum</button></span>      
+                                    <span><button class="button"><i
+                                                class="fa-solid fa-dumbbell"></i>&nbsp;Gyms</button></span>
+                                    <span><button class="button"><i
+                                                class="fa-solid fa-building-columns"></i>&nbsp;Museum</button></span>
                                 </div>
                                 <div class="row">
-                                    <span><button class="button"><i class="fa-solid fa-wand-magic-sparkles"></i>&nbsp;Art</button></span>
-                                    <span><button class="button"><i class="fa-solid fa-warehouse"></i>&nbsp;Libraries</button></span>     
+                                    <span><button class="button"><i
+                                                class="fa-solid fa-wand-magic-sparkles"></i>&nbsp;Art</button></span>
+                                    <span><button class="button"><i
+                                                class="fa-solid fa-warehouse"></i>&nbsp;Libraries</button></span>
                                 </div>
                                 <div class="row">
-                                    <span><button class="button"><i class="fa-solid fa-wine-glass"></i>&nbsp;Nightlife</button></span>
+                                    <span><button class="button"><i
+                                                class="fa-solid fa-wine-glass"></i>&nbsp;Nightlife</button></span>
                                 </div>
                             </div>
-                        <span class="line"></span>
+                            <span class="line"></span>
                         </section>
-                            
+
                         <section>
                             <h2>Shopping</h2>
-                            <div class="container" class = "love">
+                            <div class="container" class="love">
                                 <div class="row">
-                                    <span><button class="button"><i class="fa-solid fa-carrot"></i>&nbsp;Groceries</button></span>
-                                    <span><button class="button"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Shopping centers</button> </span>     
+                                    <span><button class="button"><i
+                                                class="fa-solid fa-carrot"></i>&nbsp;Groceries</button></span>
+                                    <span><button class="button"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Shopping
+                                            centers</button> </span>
                                 </div>
                                 <div class="row">
-                                    <span><button class="button"><i class="fa-brands fa-keybase"></i>&nbsp;Beauty supplies</button></span>
-                                    <span><button class="button"><i class="fa-solid fa-keyboard"></i>&nbsp;Electronics</button> </span>       
+                                    <span><button class="button"><i class="fa-brands fa-keybase"></i>&nbsp;Beauty
+                                            supplies</button></span>
+                                    <span><button class="button"><i
+                                                class="fa-solid fa-keyboard"></i>&nbsp;Electronics</button> </span>
                                 </div>
                                 <div class="row">
-                                    <span><button class="button"><i class="fa-solid fa-car-on"></i>&nbsp;Car Dealers</button></span>
-                                    <span><button class="button"><i class="fa-solid fa-football"></i>&nbsp;Sporting Goods</button> </span>   
+                                    <span><button class="button"><i class="fa-solid fa-car-on"></i>&nbsp;Car
+                                            Dealers</button></span>
+                                    <span><button class="button"><i class="fa-solid fa-football"></i>&nbsp;Sporting
+                                            Goods</button> </span>
                                 </div>
                                 <div class="row">
-                                    <span><button class="button"><i class="fa-solid fa-plant-wilt"></i>&nbsp;Home & Garden</button></span>
-                                    <span><button class="button"><i class="fa-solid fa-leaf"></i>&nbsp;Convinience</button></span>
+                                    <span><button class="button"><i class="fa-solid fa-plant-wilt"></i>&nbsp;Home &
+                                            Garden</button></span>
+                                    <span><button class="button"><i
+                                                class="fa-solid fa-leaf"></i>&nbsp;Convinience</button></span>
                                 </div>
                                 <div class="row">
-                                    <span><button class="button"><i class="fa-solid fa-shirt"></i>&nbsp;Nightlife</button></span>
+                                    <span><button class="button"><i
+                                                class="fa-solid fa-shirt"></i>&nbsp;Nightlife</button></span>
                                 </div>
                             </div>
-                        <span class="line"></span>
+                            <span class="line"></span>
                         </section>
-                
+
                         <section>
                             <h2>Services</h2>
-                            <div class="container" >
+                            <div class="container">
                                 <div class="row">
-                                    <span> <button class="button"><i class="fa-solid fa-hotel"></i>&nbsp;Hotels</button></span>
-                                    <span><button class="button"><i class="fa-solid fa-charging-station"></i>&nbsp;Electric charging</button> </span>       
+                                    <span> <button class="button"><i
+                                                class="fa-solid fa-hotel"></i>&nbsp;Hotels</button></span>
+                                    <span><button class="button"><i
+                                                class="fa-solid fa-charging-station"></i>&nbsp;Electric
+                                            charging</button> </span>
                                 </div>
                                 <div class="row">
-                                    <span><button class="button"><i class="fa-solid fa-money-bills"></i>&nbsp;ATM</button></span>
-                                    <span><button class="button"><i class="fa-solid fa-gas-pump"></i>&nbsp;Gas</button>  </span>       
+                                    <span><button class="button"><i
+                                                class="fa-solid fa-money-bills"></i>&nbsp;ATM</button></span>
+                                    <span><button class="button"><i class="fa-solid fa-gas-pump"></i>&nbsp;Gas</button>
+                                    </span>
                                 </div>
                                 <div class="row">
-                                    <span> <button class="button"><i class="fa-solid fa-scissors"></i>&nbsp;Beaty salon</button></span>
-                                    <span><button class="button"><i class="fa-solid fa-stethoscope"></i>&nbsp;Health Center</button>  </span>        
+                                    <span> <button class="button"><i class="fa-solid fa-scissors"></i>&nbsp;Beaty
+                                            salon</button></span>
+                                    <span><button class="button"><i class="fa-solid fa-stethoscope"></i>&nbsp;Health
+                                            Center</button> </span>
                                 </div>
                                 <div class="row">
-                                    <span><button class="button"><i class="fa-solid fa-paperclip"></i>&nbsp;Malls & Shopping</button></span>
-                                    <span><button class="button"><i class="fa-solid fa-screwdriver-wrench"></i>&nbsp;Car Repair</button> </span>        
+                                    <span><button class="button"><i class="fa-solid fa-paperclip"></i>&nbsp;Malls &
+                                            Shopping</button></span>
+                                    <span><button class="button"><i class="fa-solid fa-screwdriver-wrench"></i>&nbsp;Car
+                                            Repair</button> </span>
                                 </div>
                                 <div class="row">
-                                    <span> <button class="button"><i class="fa-solid fa-square-parking"></i>&nbsp;Parking</button></span>
-                                    <span> <button class="button"><i class="fa-solid fa-car-on"></i>&nbsp;Car Wash</button></span>
+                                    <span> <button class="button"><i
+                                                class="fa-solid fa-square-parking"></i>&nbsp;Parking</button></span>
+                                    <span> <button class="button"><i class="fa-solid fa-car-on"></i>&nbsp;Car
+                                            Wash</button></span>
                                 </div>
                                 <div class="row">
-                                    <span><button class="button"><i class="fa-solid fa-syringe"></i>&nbsp;Pharmacy</button></span>
-                                    <span> <button class="button"><i class="fa-solid fa-wind"></i>&nbsp;Dry Cleaning</button></span>
+                                    <span><button class="button"><i
+                                                class="fa-solid fa-syringe"></i>&nbsp;Pharmacy</button></span>
+                                    <span> <button class="button"><i class="fa-solid fa-wind"></i>&nbsp;Dry
+                                            Cleaning</button></span>
                                 </div>
                             </div>
-                
+
                         </section>
-                
+
                     </div>
                 </div>
             </div>
@@ -282,7 +332,73 @@
             </div>
         </div>
     </div>
-
+    <!-- Suggested Modal -->
+    <div class="modal fade" id="suggestedModal" tabindex="-1" aria-labelledby="suggestedModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <a href="#"><img class="" data-bs-dismiss="modal" aria-label="Close"
+                            src="./images/home/arrow-left.png" alt="An arrow icon to close the modal"></a>
+                    <h5 class="modal-title text-secondary fw-normal" id="suggestedModalLabel">Suggested</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body AppSuggested container">
+                        <div class="AppSuggested__elem align-middle row">
+                            <div class="AppSuggested__elem__rating col-2 d-grid gap-3">
+                                <img class="" src="./Nayer/Images/like.png" alt="A thumbs up icon">
+                                <p class="text-center">4.2 <img class="" src="./Nayer/Images/star.png"
+                                        alt="A star icon showing the rating">
+                                </p>
+                            </div>
+                            <div class="col-8">
+                                <h4>Panora Bread</h4>
+                                <p class="AppSuggested__elem__address">197 N Queen St, Etobicoke</p>
+                                <p class="text-center">Restaurants</p>
+                            </div>
+                            <div class="col-2 d-grid gap-3">
+                                <img class="" src="./Nayer/Images/heart-stroke.png" alt="A heart icon">
+                                <p class="text-center">3.5 mi</p>
+                            </div>
+                        </div>
+                        <div class="AppSuggested__elem align-middle row">
+                            <div class="AppSuggested__elem__rating col-2 d-grid gap-3">
+                                <img class="" src="./Nayer/Images/abstentious.png" alt="abstentious icon">
+                                <p class="text-center">4.2 <img class="" src="./Nayer/Images/star.png"
+                                        alt="A star icon showing the rating">
+                                </p>
+                            </div>
+                            <div class="col-8">
+                                <h3>Starbucks</h3>
+                                <p class="AppSuggested__elem__address">1564 Royal York Rd, Etobicoke</p>
+                                <p class="text-center">Restaurants</p>
+                            </div>
+                            <div class="col-2 d-grid gap-3">
+                                <img class="" src="./Nayer/Images/heart-stroke.png" alt="A heart icon">
+                                <p class="text-center">3.5 mi</p>
+                            </div>
+                        </div>
+                        <div class="AppSuggested__elem align-middle row">
+                            <div class="AppSuggested__elem__rating col-2 d-grid gap-3">
+                                <img class="" src="./Nayer/Images/dislike.png" alt="A thumbs down icon">
+                                <p class="text-center">4.2 <img class="" src="./Nayer/Images/star.png"
+                                        alt="A star icon showing the rating">
+                                </p>
+                            </div>
+                            <div class="col-8">
+                                <h3>Hero burger</h3>
+                                <p class="AppSuggested__elem__address">55 Reading Ct, Etobicoke</p>
+                                <p class="text-center">Restaurants</p>
+                            </div>
+                            <div class="col-2 d-grid gap-3">
+                                <img class="" src="./Nayer/Images/heart-stroke.png" alt="An heart icon">
+                                <p class="text-center">3.5 mi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Map Modal -->
     <div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
@@ -320,13 +436,63 @@
     <div class="modal fade" id="savedModal" tabindex="-1" aria-labelledby="savedModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
-                <div class="modal-header border-0">
+                <div class="modal-header saved border-0">
                     <a href="#"><img class="" data-bs-dismiss="modal" aria-label="Close"
                             src="./images/home/arrow-left.png" alt="An arrow icon to close the modal"></a>
                     <h5 class="modal-title text-secondary fw-normal" id="savedModalLabel">Saved</h5>
                 </div>
-                <div class="modal-body">
-                    ...
+                <div class="modal-body UserSaved container">
+                    <div class="UserSaved__elem align-middle row">
+                        <div class="UserSaved__elem__rating col-2 d-grid gap-3">
+                            <img class="" src="./Nayer/Images/like.png" alt="A thumbs up icon">
+                            <p class="text-center">4.2 <img class="" src="./Nayer/Images/star.png"
+                                    alt="A star icon showing the rating">
+                            </p>
+                        </div>
+                        <div class="col-8">
+                            <h4>Panora Bread</h4>
+                            <p class="UserSaved__elem__address">197 N Queen St, Etobicoke</p>
+                            <p class="text-center">Restaurants</p>
+                        </div>
+                        <div class="col-2 d-grid gap-3">
+                            <img class="" src="./Nayer/Images/heart.png" alt="A heart icon">
+                            <p class="text-center">3.5 mi</p>
+                        </div>
+                    </div>
+                    <div class="UserSaved__elem align-middle row">
+                        <div class="UserSaved__elem__rating col-2 d-grid gap-3">
+                            <img class="" src="./Nayer/Images/abstentious.png" alt="abstentious icon">
+                            <p class="text-center">4.2 <img class="" src="./Nayer/Images/star.png"
+                                    alt="A star icon showing the rating">
+                            </p>
+                        </div>
+                        <div class="col-8">
+                            <h3>Starbucks</h3>
+                            <p class="UserSaved__elem__address">1564 Royal York Rd, Etobicoke</p>
+                            <p class="text-center">Restaurants</p>
+                        </div>
+                        <div class="col-2 d-grid gap-3">
+                            <img class="" src="./Nayer/Images/heart.png" alt="A heart icon">
+                            <p class="text-center">3.5 mi</p>
+                        </div>
+                    </div>
+                    <div class="UserSaved__elem align-middle row">
+                        <div class="UserSaved__elem__rating col-2 d-grid gap-3">
+                            <img class="" src="./Nayer/Images/dislike.png" alt="A thumbs down icon">
+                            <p class="text-center">4.2 <img class="" src="./Nayer/Images/star.png"
+                                    alt="A star icon showing the rating">
+                            </p>
+                        </div>
+                        <div class="col-8">
+                            <h3>Hero burger</h3>
+                            <p class="UserSaved__elem__address">55 Reading Ct, Etobicoke</p>
+                            <p class="text-center">Restaurants</p>
+                        </div>
+                        <div class="col-2 d-grid gap-3">
+                            <img class="" src="./Nayer/Images/heart.png" alt="An heart icon">
+                            <p class="text-center">3.5 mi</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -342,12 +508,30 @@
                     <h5 class="modal-title text-secondary fw-normal" id="moreModalLabel">More</h5>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <div>
+                        <h3>Access for home</h3>
+                        <img class="" src="./Nayer/Images/arrow.png" alt="An arrow icon to close the modal">
+                    </div>
+                    <div>
+                        <h3>Contact Us</h3>
+                        <img class="" src="./Nayer/Images/arrow.png" alt="An arrow icon to close the modal">
+                    </div>
+                    <div>
+                        <h3>About Us</h3>
+                        <img class="" src="./Nayer/Images/arrow.png" alt="An arrow icon to close the modal">
+                    </div>
+                    <div>
+                        <h3>Terms & Conditions</h3>
+                        <img class="" src="./Nayer/Images/arrow.png" alt="An arrow icon to close the modal">
+                    </div>
+                    <div>
+                        <h3>Privacy Policy</h3>
+                        <img class="" src="./Nayer/Images/arrow.png" alt="An arrow icon to close the modal">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
     <script src="./js/map.js"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
