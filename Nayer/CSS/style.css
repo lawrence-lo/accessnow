@@ -169,3 +169,52 @@ border: 1px solid #00D1FF;
 }
 /*MORE END*/
 
+/*Events*/
+.events__elem{
+  border-bottom: 1px solid #cccccc;
+}
+.events__elem__details{
+  background-color: #00D1FF;
+  color: white;
+  font-size: 15px;
+}
+.events__elem__type{
+  font-size: 10px;
+  border: 1px solid black;
+  border-radius: 16px;
+  width:100px;
+  margin: 0;
+}
+.events__elem__address{
+  font-size: 9px;
+  margin-bottom: 8px;
+}
+
+.btn-pic{
+  margin-right: 5px;
+}
+.type-btn-pic{
+  margin-right: 3px;
+
+}
+
+.events_specif button:focus{
+  color: white;
+  background-color: #00D1FF;
+  border: none;
+}
+.events h6{
+  font-weight:bold;
+}
+
+#Events-search-bar{
+  position: relative;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 400;
+  width: 100vw;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+
+}

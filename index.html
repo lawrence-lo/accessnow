@@ -427,10 +427,83 @@
                 <div class="modal-header border-0">
                     <a href="#"><img class="" data-bs-dismiss="modal" aria-label="Close"
                             src="./images/home/arrow-left.png" alt="An arrow icon to close the modal"></a>
-                    <h5 class="modal-title text-secondary fw-normal" id="recommendedModalLabel">Recommended</h5>
+                    <h5 class="modal-title text-secondary fw-normal pb-4 border-bottom" id="recommendedModalLabel">
+                        Events</h5>
                 </div>
-                <div class="modal-body">
-                    ...
+                <div id="Events-search-bar" class="d-flex flex-row justify-content-center align-items-center">
+                    <div id="search-items" class="d-flex flex-row p-2 my-3 ms-3">
+                        <img id="search-icon" src="./images/home/search.png" alt="A search icon">
+                        <input type="text" class="form-control rounded-0 border-0" placeholder="Search"
+                            aria-label="Search bar">
+                        <img id="mic-icon" src="./images/home/mic.png" alt="A microphone icon">
+                    </div>
+                    <img id="option-icon" class="m-3" src="./images/home/option.png" alt="An option icon">
+
+                </div>
+                <div class="modal-body events">
+
+                    <div class="events_specif pb-4 border-bottom">
+                        <button class="btn btn-outline-dark rounded-pill">Upcoming events</button>
+                        <button class="btn btn-outline-dark rounded-pill">My events</button>
+                    </div>
+                    <div>
+                        <h5 class="mt-2">Results</h5>
+                        <div class="events__elem align-middle row">
+                            <div class="events__elem__pic col-5 d-grid gap-3">
+                                <img class="" src="./Nayer/Images/Group 320.png" alt="An item photo" width="131.12"
+                                    height="128">
+
+                            </div>
+                            <div class="col-7">
+                                <h6 class="font-weight-bold">Panora Bread event</h6>
+                                <p class="events__elem__type d-inline-flex p-2"><img
+                                        src="./Nayer/Images/fi-sr-utensils.png" width="15" height="14"
+                                        class=" type-btn-pic">Restaurants</p>
+                                <p class="events__elem__address mt-2 mb-6">197 N Queen St, Etobicoke</p>
+                                <button class="btn rounded-lg events__elem__details"><img class="btn-pic"
+                                        src="./Nayer/Images/fi-rr-cross-circle.png" width="18.95" height="18.95"
+                                        class="pr-2">View details</button>
+                            </div>
+
+                        </div>
+                        <div class="events__elem align-middle row mt-3">
+                            <div class="events__elem__pic col-5 d-grid gap-3">
+                                <img class="" src="./Nayer/Images/Group 322.png" alt="An item pic" width="131.12"
+                                    height="128">
+
+                            </div>
+                            <div class="col-7">
+                                <h6 class="font-weight-bold">Starbuck event</h6>
+                                <p class="events__elem__type d-inline-flex p-2"><img
+                                        src="./Nayer/Images/fi-sr-microphone-alt.png" width="15" height="14"
+                                        class=" type-btn-pic">Live music</p>
+                                <p class="events__elem__address mt-2 mb-6">54 Reading Ct, Etobicoke</p>
+                                <button class="btn rounded-lg events__elem__details"><img class="btn-pic"
+                                        src="./Nayer/Images/fi-rr-cross-circle.png" width="18.95" height="18.95"
+                                        class="pr-2">View details</button>
+                            </div>
+
+                        </div>
+                        <div class="events__elem align-middle row mt-3">
+                            <div class="events__elem__pic col-5 d-grid gap-3">
+                                <img class="" src="./Nayer/Images/Group 321.png" alt="An item pic" width="131.12"
+                                    height="128">
+
+                            </div>
+                            <div class="col-7">
+                                <h6 class="font-weight-bold">Burger event</h6>
+                                <p class="events__elem__type d-inline-flex p-2"><img
+                                        src="./Nayer/Images/fi-sr-video-camera.png" width="15" height="14"
+                                        class=" type-btn-pic">Films</p>
+                                <p class="events__elem__address mt-2 mb-6">55 Reading Ct, Etobicoke</p>
+                                <button class="btn rounded-lg events__elem__details"><img class="btn-pic"
+                                        src="./Nayer/Images/fi-rr-cross-circle.png" width="18.95" height="18.95"
+                                        class="pr-2">View details</button>
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
