@@ -28,6 +28,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/b7e8f06a9a.js" crossorigin="anonymous"></script>
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
 
     <!-- Pure CSS Scrollable Horizontal Menu -->
     <!-- Reference: https://www.geeksforgeeks.org/pure-css-scrollable-horizontal-menu/ -->
@@ -64,12 +67,12 @@
             <button type="button" class="btn btn-light rounded-pill mx-1 px-3">
                 <img class="px-2" src="./images/home/restaurant.png" alt="A restaurant icon">Restaurants
             </button>
-            <button type="button" class="btn btn-light rounded-pill mx-1 px-3">
+            <!-- <button type="button" class="btn btn-light rounded-pill mx-1 px-3">
                 <img class="px-2" src="./images/home/coffee.png" alt="A coffee icon">Coffee
             </button>
             <button type="button" class="btn btn-light rounded-pill mx-1 px-3">
                 <img class="px-2" src="./images/home/shopping-cart.png" alt="A shooping cart icon">Shopping
-            </button>
+            </button> -->
             <button type="button" class="btn btn-light rounded-pill mx-1 px-3" data-bs-toggle="modal"
                 data-bs-target="#moreCategoriesModal">
                 <img class="px-2" src="./images/home/more.png" alt="An icon with dots">More
@@ -114,6 +117,88 @@
                 </li>
             </ul>
         </nav>
+    </div>
+
+    <!-- Start up 1 -->
+    <div class="modal fade startModal" id="start1Modal" tabindex="-1" aria-labelledby="start1ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-body text-center p-0 m-0">
+                    <img class="accessnow-logo p-1"
+                    src="./images/home/accessnow-logo.png" alt="AccessNow Logo"></a>
+                    <h2 class="p-2">Make sure your every trip is accessible</h2>
+                    <img class="d-md-none start-bg" src="./images/home/start1.png" alt="A background image for the first start up"></a>
+                    <p class="p-3 m-0">We’re happy to share all information on a destinations accessibility, so you can always be accommated.</p>
+                </div>
+                <div class="modal-footer border-0 justify-content-between">
+                    <div class="flex-even">
+                    </div>
+                    <div class="flex-even text-center">
+                        <img id="indicator1" src="./images/home/indicator1.png" alt="A page indicator"></a>
+                    </div>
+                    <div class="flex-even text-end">
+                        <a href="#"><img class="" data-bs-target="#start2Modal" data-bs-toggle="modal" data-bs-dismiss="modal"
+                            src="./images/home/start-next.png" alt="An arrow icon to go to the next modal"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start up 2 -->
+    <div class="modal fade startModal" id="start2Modal" tabindex="-1" aria-labelledby="start2ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-body text-center p-0 m-0">
+                    <img class="accessnow-logo p-1"
+                    src="./images/home/accessnow-logo.png" alt="AccessNow Logo"></a>
+                    <h2 class="p-2">Find the best place for your journey</h2>
+                    <img class="d-md-none start-bg" src="./images/home/start2.png" alt="A background image for the second start up"></a>
+                    <p class="p-3 m-0">We’re happy to share Reviews on all destinations accessibility. You will always find a place that suits you.</p>
+                </div>
+                <div class="modal-footer border-0 justify-content-between">
+                    <div class="flex-even">
+                    </div>
+                    <div class="flex-even text-center">
+                        <img id="indicator2" src="./images/home/indicator2.png" alt="A page indicator"></a>
+                    </div>
+                    <div class="flex-even text-end">
+                        <a href="#"><img class="" data-bs-target="#start3Modal" data-bs-toggle="modal" data-bs-dismiss="modal"
+                            src="./images/home/start-next.png" alt="An arrow icon to go to the next modal"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start up 3 -->
+    <div class="modal fade startModal" id="start3Modal" tabindex="-1" aria-labelledby="start3ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-body text-center p-0 m-0">
+                    <img class="accessnow-logo p-1"
+                    src="./images/home/accessnow-logo.png" alt="AccessNow Logo"></a>
+
+                    <div class="d-flex flex-row justify-content-center">
+                        <img class=""
+                    src="./images/home/accessibility-btn.png" alt="Accessibility button">
+                    </div>
+                    <div class="d-flex flex-row justify-content-center">
+                            <img class="py-3 px-1"
+                    src="./images/home/explore-btn.png" alt="Explore button">
+                            <img class="py-3 px-1"
+                    src="./images/home/reviews-btn.png" alt="Reviews button">
+                    </div>
+                    <div class="d-flex flex-row justify-content-center">
+                        <img class=""
+                    src="./images/home/recommendations-btn.png" alt="Recommendations button">
+                    </div>
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+                    <button type="button" class="btn p-2 m-3" data-bs-dismiss="modal">Get Started</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- User Modal -->

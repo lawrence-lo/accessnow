@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap');
+/*font-family: 'Montserrat', sans-serif;*/
+
 body {
     font-family: 'Helvetica Neue', sans-serif;
 }
@@ -133,4 +136,59 @@ scrollbar-width: none;  /* Firefox */
 
 .leaflet-control-attribution {
     display: none;
+}
+
+/* start up modals */
+.startModal .modal-content {
+    background-color: #29A0DA;
+}
+
+.startModal .modal-body {
+    overflow-x: hidden;
+}
+
+.start-bg {
+    width: 100%;
+}
+
+.startModal img {
+    object-fit: none;
+    /* The image is not resized */
+}
+
+.startModal h2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 34px;
+    color: #FFFFFF;
+}
+
+.startModal p {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+}
+
+/* https://stackoverflow.com/questions/51775461/why-is-flex-fill-not-creating-equal-width-in-bootstrap */
+.flex-even {
+    flex: 1;
+}
+
+#start3Modal button {
+    background: #FFFFFF;
+    border-radius: 16px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    color: #00D1FF;
+    width: 327px;
 }
